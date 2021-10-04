@@ -19,7 +19,7 @@ public class BananasTest {
     }
 
     @Test
-    public void testFindA() {
+    public void testFindK1() {
         bananas.setPiles(test1Input);
         bananas.setHours(test1Hours);
         bananas.comparsion();
@@ -27,7 +27,7 @@ public class BananasTest {
     }
 
     @Test
-    public void testFindB() {
+    public void testFindK2() {
         bananas.setPiles(test2Input);
         bananas.setHours(test2Hours);
         bananas.comparsion();
@@ -35,11 +35,10 @@ public class BananasTest {
     }
 
     @Test
-    public void testFindC() {
+    public void testFindK3() {
         bananas.setPiles(test3Input);
         bananas.setHours(test3Hours);
         bananas.comparsion();
         Assert.assertEquals(23, bananas.getK());
     }
-
 }
