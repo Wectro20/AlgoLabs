@@ -5,16 +5,16 @@ Jackie can eat bananas in an hour. Every hour she picks a basket of bananas and 
 Jackie likes to eat slowly, but still wants to finish eating all the bananas before the guards return.
 Determine the minimum integer K so that Jackie can eat all the bananas in the warehouse for H hours until the guards return.
 ## Examples: 
-- Example 1:
-Input: piles = [3,6,7,11], H = 8 <br />
+- Example 1:<br />
+Input: piles = [3,6,7,11],  H = 8 <br />
 Output: 4
 
 
-- Example 2:
-Input: piles = [30,11,23,4,20], H = 5 <br />
+- Example 2:<br />
+Input: piles = [30,11,23,4,20],  H = 5 <br />
 Output: 30
 
 
-- Example 3:
-Input: piles = [30,11,23,4,20], H = 6 <br />
+- Example 3:<br />
+Input: piles = [30,11,23,4,20],  H = 6 <br />
 Output: 23
