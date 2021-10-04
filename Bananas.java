@@ -1,22 +1,26 @@
 public class Bananas {
-    public int[] piles;
-    public int[] temp;
-    public int hours;
+    private int[] piles;
+    private int[] temp;
+    private int hours;
+    private int k = 0;
+
+    public void setPiles(int[] piles) {
+        this.piles = piles;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getK() {
+        return k;
+    }
+
+    public Bananas() {}
 
     public Bananas(int[] piles, int hours) {
         this.piles = piles;
         this.hours = hours;
-        comparsion();
-        isAllNull ();
-    }
-    public boolean isAllNull () {
-        for (int i = 0; i < piles.length; i++) {
-            if (piles[i] != 0) {
-                return true;
-            }
-        }
-        System.out.println("Nothing to eat (˃̣̣̥╭╮˂̣̣̥)");
-        return false;
     }
 
     public boolean isArrNull (int [] arr) {
@@ -29,23 +33,25 @@ public class Bananas {
     }
 
     public void comparsion() {
-
+        if(isArrNull(piles)) {
+            System.out.println("Nothing to eat (˃̣̣̥╭╮˂̣̣̥)");
+            return;
+        }
         if (piles.length > hours) {
             System.out.println("Too much piles with bananas !!! I can't eat them all :(");
-            System.exit(0);
+            return;
         }
         if (piles.length == hours) {
-            int max = piles[0];
+            k = piles[0];
             for (int i = 1; i < piles.length; i++) {
-                if(max < piles[i]){
-                    max = piles[i];
+                if(k < piles[i]){
+                    k = piles[i];
                 }
             }
-            System.out.println("Minimal number of bananas need to be eaten by: " + hours + " hours -> " + max);
-            System.exit(0);
+            System.out.println("Minimal number of bananas need to be eaten by: " + hours + " hours -> " + k);
+            return;
         }
         boolean kFound = true;
-        int k = 0;
         while (kFound) {
             temp = piles.clone();
             int hoursCurrent = 0;
