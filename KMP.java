@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class KMP {
     static int [] prefixFunc(String toFind) {
         int [] values = new int[toFind.length()];
-        for (int i = 0; i < toFind.length(); i++) {
+        for (int i = 1; i < toFind.length(); i++) {
             int j = 0;
             while (i + j <toFind.length() && toFind.charAt(j) == toFind.charAt(i + j)) {
                 values [i + j] = Math.max(values[i + j], j + i);
